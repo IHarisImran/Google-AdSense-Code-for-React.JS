@@ -2,13 +2,9 @@ import { useEffect } from "react";
 
 export default function AdCardComponent() {
     useEffect(() => {
-        if (document.location.host != 'localhost:3000') {
-            for (var i = 0; i < 1; i++) {
-                try {
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                } catch (e) { }
-            };
-        }
+        if (document.location.host !== 'localhost:3000') {
+            try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch (e) { };
+        };
     }, []);
 
     return (
